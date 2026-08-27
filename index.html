@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora — Clareza operacional para times de RH e Operações</title>
+<meta name="description" content="Aurora é a plataforma de IA que organiza dados de pessoas e processos para que times de RH e Operações decidam mais rápido.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#topo" class="logo" aria-label="Aurora — página inicial">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="32" height="32">
+          <path fill="url(#grad-logo)" d="M20 3c1 6 3.5 8.5 9.5 9.5C23.5 13.5 21 16 20 22c-1-6-3.5-8.5-9.5-9.5C16.5 11.5 19 9 20 3z"/>
+          <circle cx="31" cy="8" r="2.4" fill="url(#grad-logo)"/>
+          <circle cx="9" cy="27" r="1.6" fill="url(#grad-logo)"/>
+          <defs>
+            <linearGradient id="grad-logo" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0" stop-color="#8A3BFF"/>
+              <stop offset="1" stop-color="#4C6FFF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="logo-word">Aurora</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+      <span class="sr-only">Abrir menu de navegação</span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-nav" id="navMenu" aria-label="Navegação principal">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#acessibilidade">Acessibilidade</a>
+      <a href="#contato" class="nav-cta">Solicitar demonstração</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo-principal">
+
+  <!-- HERO -->
+  <section class="hero" id="topo" aria-labelledby="hero-title">
+    <div class="aurora-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Plataforma de IA para RH &amp; Operações</p>
+        <h1 id="hero-title">Clareza para decidir. Velocidade para agir.</h1>
+        <p class="hero-lead">
+          Aurora reúne os dados de pessoas e processos que hoje vivem espalhados em planilhas
+          e sistemas isolados, e devolve para o seu time respostas simples sobre o que fazer a seguir.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn btn-primary">Quero falar com vendas</a>
+          <a href="#como-funciona" class="btn btn-ghost">Ver como funciona</a>
+        </div>
+        <p class="hero-note">Sem cartão de crédito. Demonstração guiada em 20 minutos.</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-card orbit-card--1">
+          <span class="orbit-label">Turnover</span>
+          <span class="orbit-value">-18%</span>
+        </div>
+        <div class="orbit-card orbit-card--2">
+          <span class="orbit-label">Tempo de resposta</span>
+          <span class="orbit-value">3x mais rápido</span>
+        </div>
+        <div class="orbit-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section" id="beneficios" aria-labelledby="beneficios-title">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Por que Aurora</p>
+      <h2 id="beneficios-title" class="section-title">Uma base para decisões, não mais um painel para consultar</h2>
+
+      <div class="card-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2l1.6 5.3L19 9l-5.4 1.7L12 16l-1.6-5.3L5 9l5.4-1.7L12 2z"/></svg>
+          </div>
+          <h3>Dados unificados</h3>
+          <p>Conecta as fontes que sua empresa já usa e organiza tudo em uma linha do tempo única por pessoa e por time.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4 4h16v2H4V4zm0 7h16v2H4v-2zm0 7h10v2H4v-2z"/></svg>
+          </div>
+          <h3>Prioridades claras</h3>
+          <p>A IA sinaliza o que precisa de atenção agora, com o motivo explicado em linguagem simples, sem jargão técnico.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+          </div>
+          <h3>Governança e segurança</h3>
+          <p>Controle de acesso por papel, trilha de auditoria e conformidade com a LGPD desde o primeiro dia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section section--soft" id="como-funciona" aria-labelledby="como-funciona-title">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">O caminho até o primeiro insight</p>
+      <h2 id="como-funciona-title" class="section-title">Como a implantação acontece</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number" aria-hidden="true">01</span>
+          <h3>Conectar</h3>
+          <p>Sua equipe integra as fontes de dados de RH e operações com apoio do nosso time técnico.</p>
+        </li>
+        <li class="step">
+          <span class="step-number" aria-hidden="true">02</span>
+          <h3>Organizar</h3>
+          <p>Aurora estrutura e cruza as informações, identificando padrões e pontos de atenção.</p>
+        </li>
+        <li class="step">
+          <span class="step-number" aria-hidden="true">03</span>
+          <h3>Decidir</h3>
+          <p>Seu time recebe recomendações priorizadas e acompanha o impacto das ações tomadas.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ACESSIBILIDADE -->
+  <section class="section" id="acessibilidade" aria-labelledby="acessibilidade-title">
+    <div class="container acessibilidade-inner">
+      <div>
+        <p class="eyebrow">Construído para todo mundo</p>
+        <h2 id="acessibilidade-title" class="section-title section-title--left">Acessibilidade não é um extra, é parte do produto</h2>
+        <p class="section-lead">
+          Esta página foi construída seguindo boas práticas de acessibilidade digital,
+          para que qualquer visitante consiga navegar e enviar o formulário com autonomia.
+        </p>
+      </div>
+
+      <ul class="a11y-list">
+        <li><strong>Estrutura semântica:</strong> cabeçalhos, marcos (header, nav, main, footer) e ordem lógica de leitura.</li>
+        <li><strong>Navegação por teclado:</strong> todos os links, botões e campos são alcançáveis com Tab, incluindo um atalho para pular direto ao conteúdo.</li>
+        <li><strong>Foco visível:</strong> contorno de foco destacado em todos os elementos interativos.</li>
+        <li><strong>Contraste de cores:</strong> textos e botões seguem contraste mínimo AA sobre fundo claro e sobre o gradiente da marca.</li>
+        <li><strong>Formulário rotulado:</strong> cada campo tem um rótulo associado, indicação de obrigatoriedade e mensagens de erro lidas por leitores de tela.</li>
+        <li><strong>Texto alternativo:</strong> imagens decorativas são ocultadas de leitores de tela; ícones com significado têm descrição.</li>
+        <li><strong>Movimento respeitado:</strong> animações são reduzidas automaticamente quando o usuário ativa "reduzir movimento" no sistema.</li>
+        <li><strong>Responsividade:</strong> textos em unidades relativas e layout adaptado do celular ao desktop.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTATO / LEAD FORM -->
+  <section class="section section--soft" id="contato" aria-labelledby="contato-title">
+    <div class="container contato-inner">
+      <div class="contato-copy">
+        <p class="eyebrow">Fale com o time</p>
+        <h2 id="contato-title" class="section-title section-title--left">Solicite uma demonstração</h2>
+        <p class="section-lead">
+          Preencha o formulário e um especialista entra em contato para entender o
+          momento da sua empresa e mostrar a Aurora na prática.
+        </p>
+      </div>
+
+      <form
+        class="lead-form"
+        id="leadForm"
+        name="lead"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="empresa-site"
+        novalidate
+      >
+        <input type="hidden" name="form-name" value="lead">
+        <p class="honeypot-field">
+          <label>Não preencha este campo: <input name="empresa-site" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="err-nome">
+            <span class="field-error" id="err-nome" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">E-mail corporativo <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="err-email" placeholder="voce@empresa.com.br">
+            <span class="field-error" id="err-email" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="cargo">Cargo <span aria-hidden="true">*</span></label>
+            <input type="text" id="cargo" name="cargo" autocomplete="organization-title" required aria-describedby="err-cargo">
+            <span class="field-error" id="err-cargo" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="tamanho">Tamanho da empresa <span aria-hidden="true">*</span></label>
+            <select id="tamanho" name="tamanho_empresa" required aria-describedby="err-tamanho">
+              <option value="">Selecione...</option>
+              <option value="1-50">1 a 50 colaboradores</option>
+              <option value="51-200">51 a 200 colaboradores</option>
+              <option value="201-1000">201 a 1000 colaboradores</option>
+              <option value="1000+">Mais de 1000 colaboradores</option>
+            </select>
+            <span class="field-error" id="err-tamanho" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="origem">Como conheceu a Aurora?</label>
+          <select id="origem" name="origem">
+            <option value="">Selecione uma opção...</option>
+            <option value="indicacao">Indicação</option>
+            <option value="redes-sociais">Redes sociais</option>
+            <option value="busca">Busca no Google</option>
+            <option value="evento">Evento ou palestra</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Quero falar com vendas</button>
+        <p class="form-privacy">Seus dados estão seguros. Não enviamos spam.</p>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#topo" class="logo logo--footer" aria-label="Aurora — página inicial">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="24" height="24">
+          <path fill="url(#grad-logo-footer)" d="M20 3c1 6 3.5 8.5 9.5 9.5C23.5 13.5 21 16 20 22c-1-6-3.5-8.5-9.5-9.5C16.5 11.5 19 9 20 3z"/>
+          <defs>
+            <linearGradient id="grad-logo-footer" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0" stop-color="#8A3BFF"/>
+              <stop offset="1" stop-color="#4C6FFF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="logo-word">Aurora</span>
+    </a>
+    <p class="footer-copy">© 2026 Aurora. Projeto acadêmico — People First Cup: Enterprise Challenge.</p>
+    <a class="footer-link" href="https://github.com/MinCatarina/Aurora" target="_blank" rel="noopener">Ver no GitHub</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
