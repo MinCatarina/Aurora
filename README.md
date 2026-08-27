@@ -45,38 +45,6 @@ responsiva e com formulário de captação de lead realmente funcional.
 
 </div>
 
-## 🚀 Deploy
-
-O site está publicado na Netlify e disponível em:
-
-**👉 https://aurora-landing-page.netlify.app/**
-
-<details>
-<summary>📦 Rodar localmente</summary>
-
-Não é necessário nenhum build — é um site estático.
-
-```bash
-git clone https://github.com/MinCatarina/Aurora.git
-cd Aurora
-```
-
-Depois é só abrir o `index.html` no navegador, ou servir a pasta com qualquer servidor
-estático (ex.: extensão *Live Server* do VS Code).
-
-</details>
-
-<details>
-<summary>☁️ Publicar sua própria cópia na Netlify</summary>
-
-1. Acesse [app.netlify.com](https://app.netlify.com) e faça login com GitHub.
-2. **Add new site → Import an existing project → GitHub** → selecione este repositório.
-3. Não é preciso configurar build command nem publish directory.
-4. Em **Site settings → Forms**, as respostas do formulário de lead ficam disponíveis
-   automaticamente, sem precisar de backend.
-
-</details>
-
 ## ♿ Acessibilidade
 
 A página inclui uma seção própria — [**"Acessibilidade nesta página"**](https://aurora-landing-page.netlify.app/#acessibilidade) — descrevendo os recursos implementados, entre eles:
