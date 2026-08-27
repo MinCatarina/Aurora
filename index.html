@@ -1,273 +1,576 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurora — Clareza operacional para times de RH e Operações</title>
-<meta name="description" content="Aurora é a plataforma de IA que organiza dados de pessoas e processos para que times de RH e Operações decidam mais rápido.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora — Inteligência Artificial para RH</title>
+  <meta name="description" content="Aurora transforma dados em decisões conscientes sobre pessoas: people analytics, predição de rotatividade e recomendações de RH guiadas por IA." />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="assets/images/logo-aurora.svg" type="image/svg+xml" />
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+
+  <!-- Estilos da Aurora -->
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <a class="skip-link" href="#solucao">Pular para o conteúdo principal</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#topo" class="logo" aria-label="Aurora — página inicial">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="32" height="32">
-          <path fill="url(#grad-logo)" d="M20 3c1 6 3.5 8.5 9.5 9.5C23.5 13.5 21 16 20 22c-1-6-3.5-8.5-9.5-9.5C16.5 11.5 19 9 20 3z"/>
-          <circle cx="31" cy="8" r="2.4" fill="url(#grad-logo)"/>
-          <circle cx="9" cy="27" r="1.6" fill="url(#grad-logo)"/>
-          <defs>
-            <linearGradient id="grad-logo" x1="0" y1="0" x2="40" y2="40">
-              <stop offset="0" stop-color="#8A3BFF"/>
-              <stop offset="1" stop-color="#4C6FFF"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span class="logo-word">Aurora</span>
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
-      <span class="sr-only">Abrir menu de navegação</span>
-      <span class="nav-toggle-bar" aria-hidden="true"></span>
-    </button>
-
-    <nav class="site-nav" id="navMenu" aria-label="Navegação principal">
-      <a href="#beneficios">Benefícios</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#acessibilidade">Acessibilidade</a>
-      <a href="#contato" class="nav-cta">Solicitar demonstração</a>
-    </nav>
-  </div>
-</header>
-
-<main id="conteudo-principal">
-
-  <!-- HERO -->
-  <section class="hero" id="topo" aria-labelledby="hero-title">
-    <div class="aurora-glow" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Plataforma de IA para RH &amp; Operações</p>
-        <h1 id="hero-title">Clareza para decidir. Velocidade para agir.</h1>
-        <p class="hero-lead">
-          Aurora reúne os dados de pessoas e processos que hoje vivem espalhados em planilhas
-          e sistemas isolados, e devolve para o seu time respostas simples sobre o que fazer a seguir.
-        </p>
-        <div class="hero-actions">
-          <a href="#contato" class="btn btn-primary">Quero falar com vendas</a>
-          <a href="#como-funciona" class="btn btn-ghost">Ver como funciona</a>
-        </div>
-        <p class="hero-note">Sem cartão de crédito. Demonstração guiada em 20 minutos.</p>
-      </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit-card orbit-card--1">
-          <span class="orbit-label">Turnover</span>
-          <span class="orbit-value">-18%</span>
-        </div>
-        <div class="orbit-card orbit-card--2">
-          <span class="orbit-label">Tempo de resposta</span>
-          <span class="orbit-value">3x mais rápido</span>
-        </div>
-        <div class="orbit-ring"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFÍCIOS -->
-  <section class="section" id="beneficios" aria-labelledby="beneficios-title">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm">
     <div class="container">
-      <p class="eyebrow eyebrow--center">Por que Aurora</p>
-      <h2 id="beneficios-title" class="section-title">Uma base para decisões, não mais um painel para consultar</h2>
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+        <img src="assets/images/logo-aurora.svg" alt="Logo da Aurora" class="brand-logo-img" />
+        Aurora
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Alternar navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-lg-4 text-center">
+          <li class="nav-item"><a class="nav-link" href="#solucao">Solução</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acessibilidade">Acessibilidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-flex">
+        <a href="#lead-form" class="btn btn-dark-brand rounded-pill px-4">Solicitar Demonstração</a>
+      </div>
+      <div class="d-flex d-lg-none ms-2">
+        <a href="#lead-form" class="btn btn-dark-brand rounded-pill btn-sm px-3">Demonstração</a>
+      </div>
+    </div>
+  </nav>
 
-      <div class="card-grid">
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2l1.6 5.3L19 9l-5.4 1.7L12 16l-1.6-5.3L5 9l5.4-1.7L12 2z"/></svg>
+  <!-- Hero Section -->
+  <section class="py-5 overflow-hidden" id="solucao">
+    <div class="container py-3 py-lg-5" style="margin-top: 4.5rem">
+      <div class="row align-items-center pb-4 pb-lg-5">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <span class="hero-badge bg-light mb-3 px-3 py-2 border rounded-pill">
+            <i class="bi bi-stars"></i> Inteligência Artificial para RH
+          </span>
+          <h1 class="mb-4">
+            Transforme dados em decisões <span class="text-gradient">conscientes</span> sobre pessoas.
+          </h1>
+          <p class="lead text-muted mb-4">
+            A plataforma que conecta inteligência de dados e gestão humana para ajudar líderes a tomar
+            decisões estratégicas com mais segurança sobre promoção, retenção e desenvolvimento.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#lead-form" class="btn btn-dark-brand rounded-pill px-4 py-3">
+              Solicitar Demonstração <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#beneficios" class="btn btn-outline-secondary rounded-pill px-4 py-3">Conhecer a Plataforma</a>
           </div>
-          <h3>Dados unificados</h3>
-          <p>Conecta as fontes que sua empresa já usa e organiza tudo em uma linha do tempo única por pessoa e por time.</p>
-        </article>
+          <div class="d-flex align-items-center gap-2 text-muted small">
+            <div class="avatar-stack" aria-hidden="true">
+              <span class="avatar-stack-initial">RA</span>
+              <span class="avatar-stack-initial">MC</span>
+              <span class="avatar-stack-initial">CF</span>
+              <span class="avatar-stack-initial">+</span>
+            </div>
+            <span>Mais de <strong class="text-dark">500+</strong> líderes confiam na Aurora</span>
+          </div>
+        </div>
 
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M4 4h16v2H4V4zm0 7h16v2H4v-2zm0 7h10v2H4v-2z"/></svg>
+        <!-- Mockup / Gráfico -->
+        <div class="col-lg-6">
+          <div class="card hero-chart-card shadow-lg border-0 p-4">
+            <div class="d-flex justify-content-between align-items-start mb-4">
+              <div>
+                <h6 class="fw-bold mb-0">Retenção de Talentos</h6>
+                <small class="text-muted">Previsão baseada em IA</small>
+              </div>
+              <span class="badge bg-success bg-opacity-10 text-success d-flex align-items-center gap-1">
+                <i class="bi bi-graph-up-arrow"></i> +12%
+              </span>
+            </div>
+            <div class="hero-chart-area rounded-3 w-100">
+              <svg class="hero-chart-svg" viewBox="0 0 300 120" role="img" aria-label="Gráfico ilustrativo de retenção de talentos crescendo ao longo do tempo">
+                <polyline points="0,100 50,85 100,90 150,60 200,55 250,25 300,15" fill="none" stroke="url(#chartGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="300" y2="0">
+                    <stop offset="0" stop-color="#7008E7"/>
+                    <stop offset="1" stop-color="#4C6FFF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="row mt-4 text-center">
+              <div class="col-4 hero-stat-divider">
+                <small class="text-muted d-block mb-1"><i class="bi bi-bar-chart-line text-primary"></i> Engajamento</small>
+                <strong class="fs-5 text-dark">94%</strong>
+              </div>
+              <div class="col-4 hero-stat-divider">
+                <small class="text-muted d-block mb-1"><i class="bi bi-people text-primary"></i> Risco Evasão</small>
+                <strong class="fs-5 text-dark">Baixo</strong>
+              </div>
+              <div class="col-4">
+                <small class="text-muted d-block mb-1"><i class="bi bi-bullseye text-primary"></i> Performance</small>
+                <strong class="fs-5 text-dark">Top 10%</strong>
+              </div>
+            </div>
           </div>
-          <h3>Prioridades claras</h3>
-          <p>A IA sinaliza o que precisa de atenção agora, com o motivo explicado em linguagem simples, sem jargão técnico.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
-          </div>
-          <h3>Governança e segurança</h3>
-          <p>Controle de acesso por papel, trilha de auditoria e conformidade com a LGPD desde o primeiro dia.</p>
-        </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="section section--soft" id="como-funciona" aria-labelledby="como-funciona-title">
+  <!-- Features Section -->
+  <section class="py-5" id="beneficios">
+    <div class="container text-center mb-5">
+      <h2 class="fs-2 fs-lg-1">Uma nova forma de liderar pessoas</h2>
+      <p class="text-muted mx-auto" style="max-width: 560px">
+        Abandone o achismo. Utilize tecnologia de ponta para entender, engajar e reter os maiores talentos da sua organização.
+      </p>
+    </div>
     <div class="container">
-      <p class="eyebrow eyebrow--center">O caminho até o primeiro insight</p>
-      <h2 id="como-funciona-title" class="section-title">Como a implantação acontece</h2>
-
-      <ol class="steps">
-        <li class="step">
-          <span class="step-number" aria-hidden="true">01</span>
-          <h3>Conectar</h3>
-          <p>Sua equipe integra as fontes de dados de RH e operações com apoio do nosso time técnico.</p>
-        </li>
-        <li class="step">
-          <span class="step-number" aria-hidden="true">02</span>
-          <h3>Organizar</h3>
-          <p>Aurora estrutura e cruza as informações, identificando padrões e pontos de atenção.</p>
-        </li>
-        <li class="step">
-          <span class="step-number" aria-hidden="true">03</span>
-          <h3>Decidir</h3>
-          <p>Seu time recebe recomendações priorizadas e acompanha o impacto das ações tomadas.</p>
-        </li>
-      </ol>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="feature-card p-4 h-100 bg-white">
+            <div class="icon-box icon-box-blue"><i class="bi bi-pie-chart"></i></div>
+            <h5 class="fw-bold fs-6">People Analytics</h5>
+            <p class="text-muted small mb-0">Visualização estratégica de indicadores de pessoas com dashboards interativos e personalizáveis.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card p-4 h-100 bg-white">
+            <div class="icon-box icon-box-orange"><i class="bi bi-exclamation-triangle"></i></div>
+            <h5 class="fw-bold fs-6">Predição de Rotatividade</h5>
+            <p class="text-muted small mb-0">Antecipe riscos de desligamento antes que aconteçam com nossos modelos preditivos avançados.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card p-4 h-100 bg-white">
+            <div class="icon-box icon-box-purple"><i class="bi bi-graph-up-arrow"></i></div>
+            <h5 class="fw-bold fs-6">Performance Insights</h5>
+            <p class="text-muted small mb-0">Identifique talentos, mapeie sucessores e descubra oportunidades de crescimento na sua equipe.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-card p-4 h-100 bg-white">
+            <div class="icon-box icon-box-pink"><i class="bi bi-lightbulb"></i></div>
+            <h5 class="fw-bold fs-6">Recomendações Inteligentes</h5>
+            <p class="text-muted small mb-0">Apoio guiado por IA na tomada de decisões de RH, removendo viéses e focando em dados reais.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ACESSIBILIDADE -->
-  <section class="section" id="acessibilidade" aria-labelledby="acessibilidade-title">
-    <div class="container acessibilidade-inner">
-      <div>
-        <p class="eyebrow">Construído para todo mundo</p>
-        <h2 id="acessibilidade-title" class="section-title section-title--left">Acessibilidade não é um extra, é parte do produto</h2>
-        <p class="section-lead">
-          Esta página foi construída seguindo boas práticas de acessibilidade digital,
-          para que qualquer visitante consiga navegar e enviar o formulário com autonomia.
+  <!-- Stats Section -->
+  <section class="py-5 bg-dark-brand text-white text-center">
+    <div class="container py-4">
+      <h2 class="mb-2 fs-2 fs-lg-1">Impacto real para sua empresa</h2>
+      <p class="text-white-50 mb-5 mx-auto" style="max-width: 560px">
+        Números que comprovam como a inteligência artificial da Aurora transforma o departamento de Recursos Humanos em um parceiro de negócios estratégico.
+      </p>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h2 class="stat-number text-gradient mb-1">35%</h2>
+          <p class="small text-white-50 mb-0">menos turnover</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="stat-number text-gradient mb-1">50%</h2>
+          <p class="small text-white-50 mb-0">mais agilidade em decisões</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="stat-number text-gradient mb-1">90%</h2>
+          <p class="small text-white-50 mb-0">de satisfação dos gestores</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="stat-number text-gradient mb-1">ROI</h2>
+          <p class="small text-white-50 mb-0">comprovado em retenção</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empresas / Testimonials Section -->
+  <section class="py-5" id="clientes">
+    <div class="container py-3 py-lg-5 text-center">
+      <h2 class="mb-2 fs-2 fs-lg-1">Empresas que confiam na Aurora</h2>
+      <p class="text-muted mb-5 mx-auto" style="max-width: 560px">
+        Veja como organizações líderes estão transformando sua gestão de pessoas e colhendo resultados extraordinários.
+      </p>
+
+      <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5">
+        <span class="logo-placeholder"><span class="logo-dot"></span> TechNova</span>
+        <span class="logo-placeholder"><span class="logo-dot"></span> Lumina</span>
+        <span class="logo-placeholder"><span class="logo-dot"></span> Vértice</span>
+        <span class="logo-placeholder"><span class="logo-dot"></span> Stellar</span>
+        <span class="logo-placeholder"><span class="logo-dot"></span> NexoCorp</span>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-start">
+        <div class="col">
+          <div class="testimonial-card p-4 h-100 bg-white">
+            <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+            <p class="text-muted small">A Aurora nos ajudou a identificar talentos estratégicos e reduzir significativamente as perdas de profissionais-chave que nem sabíamos que estavam insatisfeitos.</p>
+            <div class="d-flex align-items-center mt-4">
+              <span class="testimonial-avatar-initial me-3" aria-hidden="true">RA</span>
+              <div>
+                <h6 class="mb-0 fw-bold fs-6">Roberto Almeida</h6>
+                <small class="text-muted">CHRO, TechNova Solutions</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="testimonial-card p-4 h-100 bg-white">
+            <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+            <p class="text-muted small">Substituímos três ferramentas desconexas pela Aurora. A visão unificada de People Analytics transformou a forma como apresentamos resultados para a diretoria.</p>
+            <div class="d-flex align-items-center mt-4">
+              <span class="testimonial-avatar-initial me-3" aria-hidden="true">MC</span>
+              <div>
+                <h6 class="mb-0 fw-bold fs-6">Mariana Costa</h6>
+                <small class="text-muted">Diretora de Talentos, Lumina Financial</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="testimonial-card p-4 h-100 bg-white">
+            <i class="bi bi-quote fs-1 text-primary opacity-25"></i>
+            <p class="text-muted small">O módulo de performance mudou nossos ciclos de avaliação. É incrível como a IA sugere os próximos passos da carreira de forma tão assertiva.</p>
+            <div class="d-flex align-items-center mt-4">
+              <span class="testimonial-avatar-initial me-3" aria-hidden="true">CF</span>
+              <div>
+                <h6 class="mb-0 fw-bold fs-6">Carlos Ferreira</h6>
+                <small class="text-muted">CEO, Grupo Vértice</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-5 bg-light" id="planos">
+    <div class="container py-3 py-lg-5">
+      <div class="text-center mb-5">
+        <h2 class="fs-2 fs-lg-1">Escolha o plano ideal para sua organização</h2>
+        <p class="text-muted mx-auto" style="max-width: 560px">
+          Soluções escaláveis que se adaptam ao tamanho e maturidade do seu time de gestão de pessoas.
         </p>
       </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-5 col-md-8">
+          <div class="pricing-card h-100">
+            <h4 class="fw-bold">Plano Rosa</h4>
+            <p class="text-muted small">Para equipes estruturadas seu RH estratégico.</p>
+            <h2 class="display-6 fw-bold mb-4">R$ 1.500<span class="fs-6 text-muted fw-normal">/mês</span></h2>
+            <ul class="list-unstyled mb-5">
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-pink me-2 mt-1"></i><span class="small">Dashboard estratégico unificado</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-pink me-2 mt-1"></i><span class="small">Relatórios básicos de turnover</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-pink me-2 mt-1"></i><span class="small">Exportação em PDF e Excel</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-pink me-2 mt-1"></i><span class="small">Acesso para até 3 gestores de RH</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-pink me-2 mt-1"></i><span class="small">Suporte por e-mail (48h)</span></li>
+            </ul>
+            <a href="#lead-form" class="btn btn-outline-dark w-100 rounded-pill py-2">Falar com consultor</a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-8">
+          <div class="pricing-pro h-100">
+            <h4 class="fw-bold text-white">Plano Violeta</h4>
+            <p class="text-white-50 small">A solução completa com Inteligência Artificial para líderes.</p>
+            <h2 class="display-6 fw-bold mb-4 text-white">Sob consulta</h2>
+            <ul class="list-unstyled mb-5">
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Todos os recursos do Plano Rosa</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">IA preditiva para risco de desligamento</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Insights avançados de performance</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Recomendações automáticas de carreira</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Integrações corporativas (SAP, Workday, etc.)</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Consultoria especializada mensal</span></li>
+              <li class="mb-3 d-flex"><i class="bi bi-check-circle-fill text-white me-2 mt-1"></i><span class="small text-white">Suporte prioritário 24/7</span></li>
+            </ul>
+            <a href="#lead-form" class="btn btn-gradient w-100 rounded-pill py-2">Solicitar Demonstração</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Lead Capture Section -->
+  <section id="lead-form" class="py-5">
+    <div class="container py-3 py-lg-5">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <span class="badge bg-light border rounded-pill mb-3 px-3 py-2" style="color: #7008e7 !important;">Fale com um especialista</span>
+          <h2 class="fw-bold mb-4 fs-2 fs-lg-1">Pronto para transformar sua gestão de pessoas?</h2>
+          <p class="text-muted mb-4">
+            Preencha o formulário para agendar uma demonstração personalizada da Aurora. Descubra como nossa plataforma pode se adaptar aos desafios específicos da sua empresa.
+          </p>
+          <div class="d-flex mb-3 gap-3">
+            <div class="benefit-icon-box bg-success bg-opacity-10"><i class="bi bi-display text-success"></i></div>
+            <div>
+              <h6 class="fw-bold mb-1">Demo Personalizada</h6>
+              <p class="small text-muted mb-0">Conheça a plataforma na prática com dados simulados do seu setor.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <div class="benefit-icon-box bg-primary bg-opacity-10"><i class="bi bi-headset text-primary"></i></div>
+            <div>
+              <h6 class="fw-bold mb-1">Consultoria Gratuita</h6>
+              <p class="small text-muted mb-0">Nossos especialistas ajudarão a mapear seus principais desafios de RH.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 offset-lg-1">
+          <div class="form-container">
+            <h4 class="fw-bold mb-4">Solicite uma demonstração</h4>
+
+            <form
+              id="leadConverterForm"
+              name="lead"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="empresa-site"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="lead" />
+              <p class="honeypot-field">
+                <label>Não preencha este campo: <input name="empresa-site" tabindex="-1" autocomplete="off" /></label>
+              </p>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadName">Nome completo *</label>
+                  <input type="text" class="form-control" id="leadName" name="nome" minlength="5" maxlength="50" required placeholder="João Silva" aria-describedby="leadNameError" />
+                  <div id="leadNameError" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadCompany">Empresa *</label>
+                  <input type="text" class="form-control" id="leadCompany" name="empresa" required placeholder="Nome da empresa" aria-describedby="leadCompanyError" />
+                  <div id="leadCompanyError" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadRole">Cargo *</label>
+                  <input type="text" class="form-control" id="leadRole" name="cargo" required placeholder="Ex: Diretor de RH" aria-describedby="leadRoleError" />
+                  <div id="leadRoleError" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadEmail">E-mail corporativo *</label>
+                  <input type="email" class="form-control" id="leadEmail" name="email" maxlength="50" required placeholder="voce@empresa.com.br" aria-describedby="leadEmailError" />
+                  <div id="leadEmailError" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadPhone">Telefone</label>
+                  <input type="tel" class="form-control" id="leadPhone" name="telefone" placeholder="(00) 00000-0000" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-medium" for="leadCompanySize">Número de colaboradores *</label>
+                  <select class="form-select" id="leadCompanySize" name="tamanho_empresa" required aria-describedby="leadCompanySizeError">
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="1-50">1 a 50 funcionários</option>
+                    <option value="51-200">51 a 200 funcionários</option>
+                    <option value="201-500">201 a 500 funcionários</option>
+                    <option value="500+">Mais de 500 funcionários</option>
+                  </select>
+                  <div id="leadCompanySizeError" class="invalid-feedback"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-medium" for="leadMessage">Como podemos ajudar? (Opcional)</label>
+                  <textarea class="form-control" id="leadMessage" name="mensagem" rows="3" placeholder="Quais são os principais desafios de RH que você quer resolver?"></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-dark-brand w-100 py-3 rounded-3" id="btnSubmitForm">
+                    Quero conhecer a Aurora
+                  </button>
+                </div>
+                <div class="col-12 text-center mt-3">
+                  <small class="text-muted">
+                    Ao enviar este formulário, você concorda com nossa
+                    <a href="#" class="text-decoration-underline">Política de Privacidade</a>.
+                  </small>
+                </div>
+              </div>
+
+              <div id="successMessage" class="alert alert-success mt-3 d-none text-center" role="alert" aria-live="polite">
+                <i class="bi bi-check-circle-fill me-2"></i> Solicitação enviada com sucesso! Entraremos em contato em breve.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-5 bg-light">
+    <div class="container py-3 py-lg-5" style="max-width: 800px">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold fs-2 fs-lg-1">Perguntas Frequentes</h2>
+        <p class="text-muted">Tudo o que você precisa saber sobre a nossa plataforma.</p>
+      </div>
+      <div class="accordion" id="accordionFAQ">
+        <div class="accordion-item mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              Meus dados de RH estarão seguros?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-muted">
+              Sim, somos 100% aderentes à Lei Geral de Proteção de Dados (LGPD) e seguimos boas práticas de segurança da informação em toda a nossa infraestrutura.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              Como funciona a implementação da Aurora?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-muted">
+              A Aurora possui APIs nativas e integrações prontas com os principais sistemas de RH do mercado. O processo é feito de forma assistida pelo nosso time de implementação, com prazos que variam conforme o plano escolhido.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              A Aurora se integra com outras ferramentas?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-muted">
+              Sim. Oferecemos integrações nativas com os principais sistemas de folha de pagamento e ERPs do mercado, além de uma API aberta para conexões personalizadas.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              Como funciona o suporte técnico?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-muted">
+              Todos os planos contam com suporte por e-mail e chat. O Plano Violeta conta ainda com um CSM dedicado e atendimento prioritário 24/7.
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-muted mt-5 mb-0">
+        Ainda tem dúvidas? <a href="#lead-form" class="fw-bold text-decoration-none text-gradient">Fale com nosso time</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Acessibilidade Section (Etapa 2) -->
+  <section class="py-5 a11y-section" id="acessibilidade">
+    <div class="container py-3 py-lg-4" style="max-width: 800px">
+      <h2 class="fs-3 fw-bold mb-2">Acessibilidade nesta página</h2>
+      <p class="text-muted mb-4">Recursos implementados para que qualquer visitante consiga navegar e enviar o formulário com autonomia.</p>
       <ul class="a11y-list">
-        <li><strong>Estrutura semântica:</strong> cabeçalhos, marcos (header, nav, main, footer) e ordem lógica de leitura.</li>
-        <li><strong>Navegação por teclado:</strong> todos os links, botões e campos são alcançáveis com Tab, incluindo um atalho para pular direto ao conteúdo.</li>
-        <li><strong>Foco visível:</strong> contorno de foco destacado em todos os elementos interativos.</li>
-        <li><strong>Contraste de cores:</strong> textos e botões seguem contraste mínimo AA sobre fundo claro e sobre o gradiente da marca.</li>
-        <li><strong>Formulário rotulado:</strong> cada campo tem um rótulo associado, indicação de obrigatoriedade e mensagens de erro lidas por leitores de tela.</li>
-        <li><strong>Texto alternativo:</strong> imagens decorativas são ocultadas de leitores de tela; ícones com significado têm descrição.</li>
-        <li><strong>Movimento respeitado:</strong> animações são reduzidas automaticamente quando o usuário ativa "reduzir movimento" no sistema.</li>
-        <li><strong>Responsividade:</strong> textos em unidades relativas e layout adaptado do celular ao desktop.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Link de "pular para o conteúdo" e estrutura semântica com landmarks (nav, main, section, footer).</li>
+        <li><i class="bi bi-check-circle-fill"></i> Navegação completa por teclado, com foco visível em todos os links, botões e campos.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Rótulos associados a cada campo do formulário e mensagens de erro lidas por leitores de tela.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Contraste de cores verificado entre texto e fundo, inclusive nos botões com gradiente da marca.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Imagens decorativas ocultadas de leitores de tela; ícones com significado descritos por texto alternativo.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Animações reduzidas automaticamente quando o usuário ativa "reduzir movimento" no sistema.</li>
+        <li><i class="bi bi-check-circle-fill"></i> Layout responsivo, do celular ao desktop.</li>
       </ul>
     </div>
   </section>
 
-  <!-- CONTATO / LEAD FORM -->
-  <section class="section section--soft" id="contato" aria-labelledby="contato-title">
-    <div class="container contato-inner">
-      <div class="contato-copy">
-        <p class="eyebrow">Fale com o time</p>
-        <h2 id="contato-title" class="section-title section-title--left">Solicite uma demonstração</h2>
-        <p class="section-lead">
-          Preencha o formulário e um especialista entra em contato para entender o
-          momento da sua empresa e mostrar a Aurora na prática.
-        </p>
+  <!-- Footer -->
+  <footer class="bg-dark-brand text-white py-5">
+    <div class="container pt-4">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-white mb-3" href="#">
+            <img src="assets/images/logo-aurora.svg" alt="Logo da Aurora" class="brand-logo-img" />
+            Aurora
+          </a>
+          <p class="text-white-50 small mb-4">
+            Plataforma de inteligência para gestão estratégica de pessoas. Transformando dados em decisões conscientes.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="#" class="text-white-50 text-decoration-none"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white-50 text-decoration-none"><i class="bi bi-twitter-x fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Plataforma</h6>
+          <ul class="list-unstyled small text-white-50 lh-lg">
+            <li><a href="#beneficios" class="text-white-50 text-decoration-none">People Analytics</a></li>
+            <li><a href="#beneficios" class="text-white-50 text-decoration-none">Predição de Rotatividade</a></li>
+            <li><a href="#beneficios" class="text-white-50 text-decoration-none">Performance Insights</a></li>
+            <li><a href="#planos" class="text-white-50 text-decoration-none">Planos e Preços</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold mb-3">Empresa</h6>
+          <ul class="list-unstyled small text-white-50 lh-lg">
+            <li><a href="#" class="text-white-50 text-decoration-none">Sobre nós</a></li>
+            <li><a href="#clientes" class="text-white-50 text-decoration-none">Clientes</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Carreiras</a></li>
+            <li><a href="#contato" class="text-white-50 text-decoration-none">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="fw-bold mb-3" id="contato">Contato Comercial</h6>
+          <ul class="list-unstyled small text-white-50 lh-lg">
+            <li><i class="bi bi-envelope me-2"></i> contato@aurorapro.com.br</li>
+            <li><i class="bi bi-telephone me-2"></i> +55 (11) 4000-0000</li>
+            <li><a href="#lead-form" class="text-decoration-underline text-white-50">Agendar demonstração <i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </div>
       </div>
-
-      <form
-        class="lead-form"
-        id="leadForm"
-        name="lead"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="empresa-site"
-        novalidate
-      >
-        <input type="hidden" name="form-name" value="lead">
-        <p class="honeypot-field">
-          <label>Não preencha este campo: <input name="empresa-site" tabindex="-1" autocomplete="off"></label>
-        </p>
-
-        <div class="field-row">
-          <div class="field">
-            <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
-            <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="err-nome">
-            <span class="field-error" id="err-nome" role="alert"></span>
-          </div>
-          <div class="field">
-            <label for="email">E-mail corporativo <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="err-email" placeholder="voce@empresa.com.br">
-            <span class="field-error" id="err-email" role="alert"></span>
-          </div>
+      <div class="border-top border-secondary mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 text-white-50 small">
+        <p class="mb-0 text-center">&copy; 2026 Aurora. Todos os direitos reservados.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50 text-decoration-none">Política de Privacidade</a>
+          <a href="#" class="text-white-50 text-decoration-none">Termos de Uso</a>
         </div>
-
-        <div class="field-row">
-          <div class="field">
-            <label for="cargo">Cargo <span aria-hidden="true">*</span></label>
-            <input type="text" id="cargo" name="cargo" autocomplete="organization-title" required aria-describedby="err-cargo">
-            <span class="field-error" id="err-cargo" role="alert"></span>
-          </div>
-          <div class="field">
-            <label for="tamanho">Tamanho da empresa <span aria-hidden="true">*</span></label>
-            <select id="tamanho" name="tamanho_empresa" required aria-describedby="err-tamanho">
-              <option value="">Selecione...</option>
-              <option value="1-50">1 a 50 colaboradores</option>
-              <option value="51-200">51 a 200 colaboradores</option>
-              <option value="201-1000">201 a 1000 colaboradores</option>
-              <option value="1000+">Mais de 1000 colaboradores</option>
-            </select>
-            <span class="field-error" id="err-tamanho" role="alert"></span>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="origem">Como conheceu a Aurora?</label>
-          <select id="origem" name="origem">
-            <option value="">Selecione uma opção...</option>
-            <option value="indicacao">Indicação</option>
-            <option value="redes-sociais">Redes sociais</option>
-            <option value="busca">Busca no Google</option>
-            <option value="evento">Evento ou palestra</option>
-            <option value="outro">Outro</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">Quero falar com vendas</button>
-        <p class="form-privacy">Seus dados estão seguros. Não enviamos spam.</p>
-
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
+      </div>
     </div>
-  </section>
+  </footer>
 
-</main>
+  <!-- Bootstrap Script -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="#topo" class="logo logo--footer" aria-label="Aurora — página inicial">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="24" height="24">
-          <path fill="url(#grad-logo-footer)" d="M20 3c1 6 3.5 8.5 9.5 9.5C23.5 13.5 21 16 20 22c-1-6-3.5-8.5-9.5-9.5C16.5 11.5 19 9 20 3z"/>
-          <defs>
-            <linearGradient id="grad-logo-footer" x1="0" y1="0" x2="40" y2="40">
-              <stop offset="0" stop-color="#8A3BFF"/>
-              <stop offset="1" stop-color="#4C6FFF"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span class="logo-word">Aurora</span>
-    </a>
-    <p class="footer-copy">© 2026 Aurora. Projeto acadêmico — People First Cup: Enterprise Challenge.</p>
-    <a class="footer-link" href="https://github.com/MinCatarina/Aurora" target="_blank" rel="noopener">Ver no GitHub</a>
-  </div>
-</footer>
+  <!-- Máscara de telefone -->
+  <script src="assets/js/phone-mask.js"></script>
 
-<script src="js/script.js"></script>
+  <!-- Validação e envio real do formulário de lead -->
+  <script src="assets/js/lead-form.js"></script>
 </body>
 </html>
