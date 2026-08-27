@@ -81,12 +81,26 @@ estático (ex.: extensão *Live Server* do VS Code).
 
 A página inclui uma seção própria — [**"Acessibilidade nesta página"**](https://aurora-landing-page.netlify.app/#acessibilidade) — descrevendo os recursos implementados, entre eles:
 
-- Link de "pular para o conteúdo" e estrutura semântica de seções
 - Navegação completa por teclado, com foco visível
 - Rótulos associados a cada campo do formulário e mensagens de erro acessíveis
 - Contraste de cores no padrão AA
 - Respeito à preferência do sistema por "reduzir movimento"
 - Layout responsivo
+
+## 📁 Estrutura do projeto
+
+```
+aurora/
+├── index.html
+├── assets/
+│   ├── style.css
+│   ├── images/
+│   │   └── img-logo-aurora.png
+│   └── js/
+│       ├── phone-mask.js
+│       └── lead-form.js
+└── README.md
+```
 
 ## 👥 Equipe
 
@@ -99,4 +113,3 @@ A página inclui uma seção própria — [**"Acessibilidade nesta página"**](h
 <div align="center">
 <sub>Projeto acadêmico desenvolvido para o desafio People First Cup: Enterprise Challenge.</sub>
 </div>
-
