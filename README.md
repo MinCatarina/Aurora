@@ -87,21 +87,6 @@ A página inclui uma seção própria — [**"Acessibilidade nesta página"**](h
 - Respeito à preferência do sistema por "reduzir movimento"
 - Layout responsivo
 
-## 📁 Estrutura do projeto
-
-```
-aurora/
-├── index.html
-├── assets/
-│   ├── style.css
-│   ├── images/
-│   │   └── img-logo-aurora.png
-│   └── js/
-│       ├── phone-mask.js
-│       └── lead-form.js
-└── README.md
-```
-
 ## 👥 Equipe
 
 | Integrante | RM |
