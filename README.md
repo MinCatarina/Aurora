@@ -45,16 +45,6 @@ responsiva e com formulário de captação de lead realmente funcional.
 
 </div>
 
-## ♿ Acessibilidade
-
-A página inclui uma seção própria — [**"Acessibilidade nesta página"**](https://aurora-landing-page.netlify.app/#acessibilidade) — descrevendo os recursos implementados, entre eles:
-
-- Navegação completa por teclado, com foco visível
-- Rótulos associados a cada campo do formulário e mensagens de erro acessíveis
-- Contraste de cores no padrão AA
-- Respeito à preferência do sistema por "reduzir movimento"
-- Layout responsivo
-
 ## 👥 Equipe
 
 | Integrante | RM |
